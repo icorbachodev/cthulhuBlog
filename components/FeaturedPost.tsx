@@ -21,7 +21,7 @@ export default function FeaturedPost() {
               <CardDescription>Inscrito el 1 de Junio, 1923</CardDescription>
             </CardHeader>
             <p className="mb-4">
-              En casa de R'lyeh, Cthulhu muerto espera soñando. Pero, ¿qué sueños pueden surgir cuando las estrellas se alinean?
+              En casa de R&apos;lyeh, Cthulhu muerto espera soñando. Pero, ¿qué sueños pueden surgir cuando las estrellas se alinean?
             </p>
             <Button variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-primary">
               Leer más
