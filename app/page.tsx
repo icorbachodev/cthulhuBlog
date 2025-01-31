@@ -8,7 +8,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Header />
       <main className="flex-grow container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-8 text-center text-primary text-shadow">The Whispers of R'lyeh</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center text-primary text-shadow">Los susurros de R'lyeh</h1>
         <FeaturedPost />
         <RecentPosts />
       </main>

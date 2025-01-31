@@ -12,17 +12,17 @@ export default function Header() {
           <ul className="flex space-x-4">
             <li>
               <Link href="/" className="hover:text-primary transition-colors">
-                Tomes
+                Tomos
               </Link>
             </li>
             <li>
               <Link href="/about" className="hover:text-primary transition-colors">
-                Lore
+                Conocimientos
               </Link>
             </li>
             <li>
               <Link href="/contact" className="hover:text-primary transition-colors">
-                Commune
+                Comuna
               </Link>
             </li>
           </ul>
@@ -31,7 +31,7 @@ export default function Header() {
           variant="outline"
           className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
         >
-          Subscribe to the Cult
+          Subscribirse al Culto
         </Button>
       </div>
     </header>

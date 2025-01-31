@@ -9,11 +9,11 @@ export default function Footer() {
             <Link href="/" className="text-2xl font-bold text-primary text-shadow">
               Eldritch Insights
             </Link>
-            <p className="mt-2 text-sm">Unveiling cosmic horrors since 1923</p>
+            <p className="mt-2 text-sm">Desvelando horrores cósmicos desde 1923</p>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-primary text-shadow">Grimoires</h2>
+              <h2 className="mb-6 text-sm font-semibold uppercase text-primary text-shadow">Grimorios</h2>
               <ul className="text-sm">
                 <li className="mb-4">
                   <Link href="#" className="hover:text-primary transition-colors">
@@ -22,18 +22,18 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link href="#" className="hover:text-primary transition-colors">
-                    Pnakotic Manuscripts
+                    Manuscritos de Pnakotic
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link href="#" className="hover:text-primary transition-colors">
-                    Book of Eibon
+                    Libro de Eibon
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-primary text-shadow">Cults</h2>
+              <h2 className="mb-6 text-sm font-semibold uppercase text-primary text-shadow">Cultos</h2>
               <ul className="text-sm">
                 <li className="mb-4">
                   <Link href="#" className="hover:text-primary transition-colors">
@@ -53,16 +53,16 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-primary text-shadow">Rituals</h2>
+              <h2 className="mb-6 text-sm font-semibold uppercase text-primary text-shadow">Rituales</h2>
               <ul className="text-sm">
                 <li className="mb-4">
                   <Link href="#" className="hover:text-primary transition-colors">
-                    Summoning
+                    Invocación
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link href="#" className="hover:text-primary transition-colors">
-                    Banishing
+                    Desterrar
                   </Link>
                 </li>
               </ul>
@@ -72,7 +72,7 @@ export default function Footer() {
         <hr className="my-6 border-muted sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-muted-foreground sm:text-center">
-            © 1923 Miskatonic University Press. All Rights Reserved.
+            © 1923 Miskatonic University Press. Todos los derechos reservados.
           </span>
         </div>
       </div>

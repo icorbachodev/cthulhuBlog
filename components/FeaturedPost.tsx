@@ -17,14 +17,14 @@ export default function FeaturedPost() {
           </div>
           <div className="md:w-1/3 p-6">
             <CardHeader className="p-0 mb-4">
-              <CardTitle className="text-2xl mb-2 text-primary text-shadow">The Call from the Deep</CardTitle>
-              <CardDescription>Inscribed on June 1, 1923</CardDescription>
+              <CardTitle className="text-2xl mb-2 text-primary text-shadow">La Llamada de las Profundidades</CardTitle>
+              <CardDescription>Inscrito el 1 de Junio, 1923</CardDescription>
             </CardHeader>
             <p className="mb-4">
-              In his house at R'lyeh, dead Cthulhu waits dreaming. But what dreams may come when the stars align?
+              En casa de R'lyeh, Cthulhu muerto espera soñando. Pero, ¿qué sueños pueden surgir cuando las estrellas se alinean?
             </p>
             <Button variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-primary">
-              Read More
+              Leer más
             </Button>
           </div>
         </div>
