@@ -32,7 +32,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <h1 className="text-4xl font-bold mb-4 text-primary text-shadow">{post.title}</h1>
             <div className="flex items-center mb-6 text-muted-foreground">
                 <span className="mr-4">Ikko The Unforgiven</span>
-                <span>{post.created_at}</span>
+                <span>{new Date(post.created_at).toLocaleString('es-ES')}</span>
             </div>
             <div
                 className="prose prose-invert prose-lg max-w-none mb-12"

@@ -31,7 +31,7 @@ export default async function RecentPosts() {
             <CardContent className="p-4">
               <CardHeader className="p-0 mb-4">
                 <CardTitle className="text-xl mb-2 text-primary text-shadow">{post.title}</CardTitle>
-                <CardDescription>{post.created_at}</CardDescription>
+                <CardDescription>{new Date(post.created_at).toLocaleString('es-ES')}</CardDescription>
               </CardHeader>
               <p className="mb-4">{post.excerpt}</p>
               <Link href={`/post/${post.slug}`} className="text-secondary hover:text-primary transition-colors">
