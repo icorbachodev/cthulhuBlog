@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import Link from "next/link"
+import { Post } from "@/types/post"
 
 async function getPosts() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/posts`);
@@ -14,7 +15,7 @@ export default async function RecentPosts() {
     <section>
       <h2 className="text-2xl font-bold mb-4 text-primary text-shadow">Revelaciones Recientes</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {recentPosts.map((post: any) => (
+        {recentPosts.map((post: Post) => (
           <Card
             key={post.id}
             className="bg-card text-card-foreground border border-secondary hover:border-primary transition-colors"
@@ -30,7 +31,7 @@ export default async function RecentPosts() {
             <CardContent className="p-4">
               <CardHeader className="p-0 mb-4">
                 <CardTitle className="text-xl mb-2 text-primary text-shadow">{post.title}</CardTitle>
-                <CardDescription>{post.date}</CardDescription>
+                <CardDescription>{post.created_at}</CardDescription>
               </CardHeader>
               <p className="mb-4">{post.excerpt}</p>
               <Link href={`/post/${post.slug}`} className="text-secondary hover:text-primary transition-colors">
