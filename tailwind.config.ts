@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import { PluginAPI } from "tailwindcss/types/config"
 module.exports = {
 	darkMode: ["class"],
 	content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
@@ -68,7 +69,7 @@ module.exports = {
 			fontFamily: {
 				lovecraft: ["Copperplate", "Papyrus", "fantasy"],
 			},
-			typography: (theme) => ({
+			typography: (theme: PluginAPI["theme"]) => ({
 				invert: {
 					css: {
 						"--tw-prose-body": theme("colors.foreground"),
