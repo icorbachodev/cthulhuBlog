@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { supabase } from "@/lib/supabase"
 import { notFound } from "next/navigation"
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
 
     const { data: post } = await supabase.from("posts").select("*").eq("slug", slug).single();
@@ -16,7 +16,6 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         .from("posts")
         .select("id, title, slug, image_url, excerpt")
         .neq("slug", slug)
-        .order("random()")
         .limit(3);
 
     return (
