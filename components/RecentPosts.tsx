@@ -9,7 +9,8 @@ async function getPosts() {
 }
 
 export default async function RecentPosts() {
-  const recentPosts = await getPosts();
+  const blogPosts = await getPosts();
+  const recentPosts = blogPosts.slice(0, 3);
 
   return (
     <section>
