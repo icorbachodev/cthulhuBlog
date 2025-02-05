@@ -1,15 +1,24 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 
-export default function FeaturedPost() {
+async function getFeaturedPost() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/posts`)
+  return res.json()
+}
+
+export default async function FeaturedPost() {
+  const blogPosts = await getFeaturedPost()
+  const featuredPost = blogPosts[blogPosts.length - 1]
+
   return (
     <Card className="mb-8 bg-card text-card-foreground border border-primary">
       <CardContent className="p-0">
         <div className="md:flex">
           <div className="md:w-2/3 relative h-64 md:h-auto">
             <Image
-              src="/placeholder.svg"
+              src={featuredPost.image_url || "/placeholder.svg"}
               alt="Featured post image"
               layout="fill"
               objectFit="cover"
@@ -17,15 +26,17 @@ export default function FeaturedPost() {
           </div>
           <div className="md:w-1/3 p-6">
             <CardHeader className="p-0 mb-4">
-              <CardTitle className="text-2xl mb-2 text-primary text-shadow">La Llamada de las Profundidades</CardTitle>
-              <CardDescription>Inscrito el 1 de Junio, 1923</CardDescription>
+              <CardTitle className="text-2xl mb-2 text-primary text-shadow">{featuredPost.title}</CardTitle>
+              <CardDescription>{new Date(featuredPost.created_at).toLocaleString('es-ES')}</CardDescription>
             </CardHeader>
             <p className="mb-4">
-              En casa de R&apos;lyeh, Cthulhu muerto espera soñando. Pero, ¿qué sueños pueden surgir cuando las estrellas se alinean?
+              {featuredPost.excerpt}
             </p>
-            <Button variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-primary">
-              Leer más
-            </Button>
+            <Link href={`/post/${featuredPost.slug}`}>
+              <Button variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-primary">
+                Leer más
+              </Button>
+            </Link>
           </div>
         </div>
       </CardContent>

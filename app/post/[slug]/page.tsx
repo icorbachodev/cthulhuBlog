@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { supabase } from "@/lib/supabase"
 import { notFound } from "next/navigation"
+import { Breadcrumb } from "@/components/Breadcrumb"
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
@@ -20,6 +21,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
     return (
         <article className="max-w-4xl mx-auto px-4 py-8 bg-background">
+            <Breadcrumb
+                items={[
+                    { label: "Tomos de Eldritch", href: "/tomes" },
+                    { label: post.title, href: `/post/${post.slug}` },
+                ]}
+            />
             <div className="mb-8">
                 <Image
                     src={post.image_url || "/placeholder.svg"}
@@ -31,7 +38,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </div>
             <h1 className="text-4xl font-bold mb-4 text-primary text-shadow">{post.title}</h1>
             <div className="flex items-center mb-6 text-muted-foreground">
-                <span className="mr-4">Ikko The Unforgiven</span>
+                <span className="mr-4">Ikko</span>
                 <span>{new Date(post.created_at).toLocaleString('es-ES')}</span>
             </div>
             <div
@@ -58,7 +65,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                                 <CardContent className="p-4">
                                     <h3 className="text-lg font-semibold mb-2 text-primary">{post.title}</h3>
                                     <p className="text-sm mb-4">{post.excerpt}</p>
-                                    <Link href={`/post/${post.id}`}>
+                                    <Link href={`/post/${post.slug}`}>
                                         <Button variant="secondary" className="w-full">
                                             Leer más
                                         </Button>
