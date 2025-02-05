@@ -1,20 +1,12 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata } from "next"
+import { cinzel } from "./fonts"
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Footer from "@/components/Footer"
+import Header from "@/components/Header"
 
 export const metadata: Metadata = {
   title: "Eldritch Insights",
-  description: "A collection of arcane knowledge and forbidden lore.",
+  description: "Un blog de horror cósmico y conocimiento prohibido",
 };
 
 export default function RootLayout({
@@ -25,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground`}
+        className={`${cinzel.className} flex flex-col min-h-screen bg-background text-foreground font-lovecraft`}
       >
-        {children}
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --font-cinzel: 'Cinzel', serif;
     --background: 220 26% 14%;
     --foreground: 143 43% 86%;
     --card: 229 34% 13%;

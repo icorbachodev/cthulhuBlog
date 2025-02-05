@@ -67,7 +67,7 @@ module.exports = {
 				"accordion-up": "accordion-up 0.2s ease-out",
 			},
 			fontFamily: {
-				lovecraft: ["Copperplate", "Papyrus", "fantasy"],
+				sans: ["var(--font-cinzel)"],
 			},
 			typography: (theme: PluginAPI["theme"]) => ({
 				invert: {
