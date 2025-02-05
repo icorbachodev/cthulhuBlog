@@ -16,17 +16,17 @@ export default function Footer() {
               <h2 className="mb-6 text-sm font-semibold uppercase text-primary text-shadow">Grimorios</h2>
               <ul className="text-sm">
                 <li className="mb-4">
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Necronomicon
+                  <Link href="https://es.wikipedia.org/wiki/Necronomic%C3%B3n" className="hover:text-primary transition-colors">
+                    Necronomicón
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Manuscritos de Pnakotic
+                  <Link href="https://es.wikipedia.org/wiki/Manuscritos_Pnak%C3%B3ticos" className="hover:text-primary transition-colors">
+                    Manuscritos Pnakóticos
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link href="https://hplovecraft.fandom.com/es/wiki/Libro_de_Eibon" className="hover:text-primary transition-colors">
                     Libro de Eibon
                   </Link>
                 </li>
@@ -36,18 +36,18 @@ export default function Footer() {
               <h2 className="mb-6 text-sm font-semibold uppercase text-primary text-shadow">Cultos</h2>
               <ul className="text-sm">
                 <li className="mb-4">
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Cthulhu
+                  <Link href="https://github.com/icorbachodev" className="hover:text-primary transition-colors">
+                    Github
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Dagon
+                  <Link href="https://icorbachodev.netlify.app/" className="hover:text-primary transition-colors">
+                    Portafolio
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Shub-Niggurath
+                  <Link href="https://www.linkedin.com/in/ismaelcorbacho" className="hover:text-primary transition-colors">
+                    LinkedIn
                   </Link>
                 </li>
               </ul>
