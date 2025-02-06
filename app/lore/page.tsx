@@ -50,7 +50,7 @@ export default function LorePage() {
             <h3 className="text-xl font-semibold mb-2 text-primary">Cthulhu</h3>
             <p>
               Una entidad cósmica de inmenso tamaño y poder, a menudo representada como una mezcla de pulpo, dragón y
-              humano. Duerme en la ciudad hundida de R'lyeh, esperando levantarse de nuevo.
+              humano. Duerme en la ciudad hundida de R&apos;lyeh, esperando levantarse de nuevo.
             </p>
           </div>
           <div className="bg-card p-4 rounded-lg">
