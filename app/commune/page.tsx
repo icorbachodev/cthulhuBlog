@@ -24,7 +24,7 @@ export default function CommunePage() {
         e.preventDefault();
         setLoading(true);
 
-        const { data, error } = await supabase.from("contacts").insert([formData]);
+        const { error } = await supabase.from("contacts").insert([formData]);
 
         if (error) {
             console.error("Error al enviar el formulario:", error.message);
