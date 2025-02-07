@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="es" className="dark">
       <body
         className={`${cinzel.className} flex flex-col min-h-screen bg-background text-foreground font-lovecraft`}
       >
